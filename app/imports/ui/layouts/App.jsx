@@ -41,6 +41,8 @@ class App extends React.Component {
   }
 }
 
+
+
 /**
  * ProtectedRoute (see React Router v4 sample)
  * Checks for Meteor login before routing to the requested page, otherwise goes to signin page.
