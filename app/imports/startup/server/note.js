@@ -9,4 +9,3 @@ Meteor.publish('Notes', function publish() {
   }
   return this.ready();
 });
-
