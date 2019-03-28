@@ -15,9 +15,11 @@ class Contact extends React.Component {
     super(props);
     this.onClick = this.onClick.bind(this);
   }
-/** Implement onClick. Should remove call on Contacts.remove with the _id for the current item and then passes this.deleteCallback **/
+/** Implement onClick. Should remove and call on Contacts.remove with the _id for the current item and then passes this.deleteCallback **/
   onClick() {
-    Contacts.remove(this.props.contact._id, this.deleteCallback);
+    if (confirm("Are you sure?")) {
+      Contacts.remove(this.props.contact._id, this.deleteCallback);
+    }
   }
 
   /** Implement deleteCallback which says success or failed on bert alert **/
